@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ListView } from 'react-native'
 import PropTypes from 'prop-types'
-import ListItem from './Listitem'
+import ListItem from './ListItem'
 
 class LibraryList extends Component {
   componentWillMount () {
     const ds = new ListView.DataSource({
-      rowHasChnaged: (r1, r2) => r1 !== r2
+      rowHasChanged: (r1, r2) => r1 !== r2
     })
     this.dataSource = ds.cloneWithRows(this.props.libraries)
   }
